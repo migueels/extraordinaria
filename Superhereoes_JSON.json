@@ -167,31 +167,144 @@
           "IdentidadS": "Hulk"
         },
         {
-          "Nombre": "Ana",
-          "procedencia": "Terrestre",
-          "genero": "femenino",
+          "Nombre": "Thanos",
+          "procedencia": "Extraterrestre",
+          "genero": "hombre",
           "Habilidades": {
-            "Habilidad": {
-              "Tipo": "natural",
-              "Definicion": "mucha agilidad y garras de gato"
-            }
+            "Habilidad": [
+              {
+                "Tipo": "fuerza",
+                "Definicion": "superfuerza \u003e thor y hulk"
+              },
+              {
+                "Tipo": "teletransporte",
+                "Definicion": "capaz de teletransportarse cin las gemas"
+              }
+            ]
           },
           "id": 5,
           "Batallas": {
             "Batalla": [
               {
-                "Fecha_comienzo": 2018,
-                "Fecha_fin": 2018,
-                "Lugar": "el patio de su casa"
+                "Fecha_comienzo": 2019,
+                "Fecha_fin": 2019,
+                "Lugar": "La tierra"
               },
               {
-                "Fecha_comienzo": 2000,
-                "Fecha_fin": 2000,
-                "Lugar": "boston"
+                "Fecha_comienzo": 2020,
+                "Fecha_fin": 2020,
+                "Lugar": "Universo"
               }
             ]
           },
-          "IdentidadS": "Catwoman"
+          "IdentidadS": "Thanos"
+        },
+        {
+          "Nombre": "Thanos",
+          "procedencia": "extraterrestre",
+          "genero": "hombre",
+          "Habilidades": {
+            "Habilidad": [
+              {
+                "Tipo": "sobrenatural",
+                "Definicion": "mucha fuerza \u003e thor y hulk"
+              },
+              {
+                "Tipo": "sobrenatural",
+                "Definicion": "super inteligencia"
+              }
+            ]
+          },
+          "id": 6,
+          "Batallas": {
+            "Batalla": [
+              {
+                "Fecha_comienzo": 2019,
+                "Fecha_fin": 2019,
+                "Lugar": "universo"
+              },
+              {
+                "Fecha_comienzo": 2020,
+                "Fecha_fin": 2020,
+                "Lugar": "la tierra"
+              }
+            ]
+          },
+          "IdentidadS": "Thanos"
+        },
+        {
+          "Nombre": "miguel",
+          "procedencia": "terrestre",
+          "genero": "hombre",
+          "Habilidades": {
+            "Habilidad": [
+              {
+                "Tipo": "natural",
+                "Definicion": "estudiar"
+              },
+              {
+                "Tipo": "natural",
+                "Definicion": "aprobar"
+              },
+              {
+                "Tipo": "natural",
+                "Definicion": "suspender"
+              }
+            ]
+          },
+          "id": 7,
+          "Batallas": {
+            "Batalla": [
+              {
+                "Fecha_comienzo": 2018,
+                "Fecha_fin": 2018,
+                "Lugar": "ufv"
+              },
+              {
+                "Fecha_comienzo": 2020,
+                "Fecha_fin": 2020,
+                "Lugar": "ufv"
+              }
+            ]
+          },
+          "IdentidadS": "salas"
+        },
+        {
+          "Nombre": "liam",
+          "procedencia": "terrestre",
+          "genero": "hombre ",
+          "Habilidades": {
+            "Habilidad": [
+              {
+                "Tipo": "natural",
+                "Definicion": "aprobar"
+              },
+              {
+                "Tipo": "natural",
+                "Definicion": "estudiar"
+              },
+              {
+                "Tipo": "natural",
+                "Definicion": "suspender"
+              }
+            ]
+          },
+          "id": 8,
+          "Batallas": {
+            "Batalla": [
+              {
+                "Fecha_comienzo": 2020,
+                "Fecha_fin": 2020,
+                "Lugar": "ufv"
+              },
+              {
+                "Fecha_comienzo": 2021,
+                "Fecha_fin": 2021,
+                "Lugar": "ufv"
+              }
+            ]
+          },
+          "IdentidadS": "liam"
         }
       ]
     }
