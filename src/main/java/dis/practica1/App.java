@@ -43,7 +43,7 @@ public class App {
     //declaramos las diferentes variables
     public static FileOutputStream fileOutputStream = null;
     public static XMLStreamWriter xmlStreamWriter = null;
-    public static File fichero = new File("XML_superheroes.xml");
+    public static File fichero = new File("XML_Heroes.xml");
     public static XMLOutputFactory xmlOutputFactory = null;
     public static InputStream inputStream = null;
     public static XMLStreamReader xmlStreamReader = null;
@@ -60,39 +60,41 @@ public class App {
             System.out.println("\nDispone del json PERFECTO");
         }
 
-        int op;
-        boolean salir = false; //inicializamos salir como false, para que no salga del menu
+        int op=0;
+        Boolean salir = false; //inicializamos salir como false, para que no salga del menu
 
         //System.out.println("INFORMACION BUSCADA EN EL JSON\n\n");
-        Scanner scanner = new Scanner(System.in);
-        while (salir == false) {
-            System.out.println("         MENU IPCIONES INICIAL     ");
-            System.out.println("\n 1- QUIERE AÑADIR MAS SUPERHEROES ");
-            System.out.println("\n 2- QUIERE LEER CONTENIDO DEL JSON");
-            System.out.println("\n 3  SALIR");
-            op = scanner.nextInt();
-            switch (op) {
+        try(Scanner scanner = new Scanner(System.in)){
+            while (salir == false) {
+                System.out.println("         MENU IPCIONES INICIAL     ");
+                System.out.println("\n 1- QUIERE AÑADIR MAS SUPERHEROES ");
+                System.out.println("\n 2- QUIERE LEER CONTENIDO DEL JSON");
+                System.out.println("\n 3  SALIR");
+                op = scanner.nextInt();
+                switch (op) {
 
-                case 1:
+                    case 1:
 
-                    AñadirSuperheroes(); //llamamos a la funcion de añadir
-                    ConvertiraJson(); //necesitamos llamar a esta funcion para que luego lo podamos leer bien
-                    break;
+                        AñadirSuperheroes(); //llamamos a la funcion de añadir
+                        ConvertiraJson(); //necesitamos llamar a esta funcion para que luego lo podamos leer bien
+                        break;
 
-                case 2:
-                    lecturajson(); //llamamos a a funcion de leer el json
+                    case 2:
+                        lecturajson(); //llamamos a a funcion de leer el json
 
-                    break;
-                case 3:
-                    System.out.println("Ha salido correctamente");
-                    salir = true;
-                    break;
-                default:
+                        break;
+                    case 3:
+                        System.out.println("Ha salido correctamente");
+                        salir = true;
+                        break;
+                    default:
 
-                    System.out.println("error");
+                        System.out.println("error");
+                }
+
             }
-
         }
+
 
 
         //if (scanner.nextLine().equals("S"))
@@ -335,7 +337,7 @@ public class App {
                             nombre = ((JsonObject) elemento).get("Nombre").getAsString(); //cogemos el nombre del superheroes para poder compararlo
 
                             //comparamos el nombre del superheroe con los nombre del array para ver si coincide
-                            if (Nombre_Superheroe.equalsIgnoreCase(nombre)) {
+                            if (nombre.equalsIgnoreCase(Nombre_Superheroe)) {
                                 //si coincide vamos a buscar las batallas en las que ha participado
                                 //volvemos a comprobar si es un array (que lo es)
                                 JsonObject batallas = elemento.getAsJsonObject();
@@ -375,6 +377,8 @@ public class App {
 
                         }
                     } catch (Exception ex2) { // en caso de que Superheroes no sea un array y solo tengamos uno
+                        gson = gson.getAsJsonObject("Superheroes");
+
                         gson = gson.getAsJsonObject("Superheroe");
                         String nombre_super = gson.get("Nombre").getAsString();
                         gson = gson.getAsJsonObject("Batallas");
@@ -431,7 +435,7 @@ public class App {
                             String nombre;
                             nombre = ((JsonObject) element).get("Nombre").getAsString(); //cogemos el nombre del superheroes para poder compararlo
 
-                            if (nombre.equalsIgnoreCase(Nombree_Superheroe)) {
+                            if (nombre.equals(Nombree_Superheroe)) {
                                 System.out.println("         FICHA SUPERHEROE:     " + ((JsonObject) element).get("Nombre").getAsString());
                                 System.out.println("\n Nombre:  " + ((JsonObject) element).get("Nombre").getAsString());
                                 System.out.println("\n ID:  " + ((JsonObject) element).get("id").getAsString());
@@ -481,10 +485,10 @@ public class App {
                         String nombre_superheroe = gson.get("Nombre").getAsString();
                         gson = gson.getAsJsonObject("Habilidades");
 
-                        if (nombre_superheroe.equalsIgnoreCase(Nombree_Superheroe)) {
+                        if (nombre_superheroe.equals(Nombree_Superheroe)) {
 
                             System.out.println("\nNombre:  " + gson.get("Nombre").getAsString());
-                            System.out.println("\nIdentidad Secreta:  " + gson.get("Nombre").getAsString());
+                            System.out.println("\nIdentidad Secreta:  " + gson.get("IdentidadS").getAsString());
 
                             //nos encontramos con las habilidades, vemos si es un array
                             try {
