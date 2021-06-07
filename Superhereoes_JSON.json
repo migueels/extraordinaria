@@ -305,6 +305,33 @@
             ]
           },
           "IdentidadS": "liam"
+        },
+        {
+          "Nombre": "Bruce wayne",
+          "procedencia": "Terrestre",
+          "genero": "hombre ",
+          "Habilidades": {
+            "Habilidad": {
+              "Tipo": "natural",
+              "Definicion": "es muy rico"
+            }
+          },
+          "id": 9,
+          "Batallas": {
+            "Batalla": [
+              {
+                "Fecha_comienzo": 2010,
+                "Fecha_fin": 2012,
+                "Lugar": "Gotham"
+              },
+              {
+                "Fecha_comienzo": 2019,
+                "Fecha_fin": 2019,
+                "Lugar": "eeuu"
+              }
+            ]
+          },
+          "IdentidadS": "batman"
         }
       ]
     }
