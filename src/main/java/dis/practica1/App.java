@@ -288,6 +288,8 @@ public class App {
     //Funcion para pdoer leer el json con gson
     public static void lecturajson() throws JsonIOException, JsonSyntaxException, FileNotFoundException {
 
+        Gson son = new Gson();
+
         JsonObject gson = null;
         Scanner scaner = null;
         try {
